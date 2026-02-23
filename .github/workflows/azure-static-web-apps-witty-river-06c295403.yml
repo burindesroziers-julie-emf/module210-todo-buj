@@ -52,8 +52,7 @@ jobs:
           temporaryPublicStorage: true # Génère un lien public temporaire pour voir le rapport
           runs: 3 # Effectue 3 passages pour une moyenne plus fiable
           budgetPath: ./budget.json # test performance budgets
-          temporaryPublicStorage: true
-
+  
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
     runs-on: ubuntu-latest
