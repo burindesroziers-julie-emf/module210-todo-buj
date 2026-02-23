@@ -52,7 +52,6 @@ jobs:
           temporaryPublicStorage: true # Génère un lien public temporaire pour voir le rapport
           runs: 3 # Effectue 3 passages pour une moyenne plus fiable
           budgetPath: ./budget.json # test performance budgets
-          uploadArtifacts: true # save results as an action artifacts
           temporaryPublicStorage: true
 
   close_pull_request_job:
