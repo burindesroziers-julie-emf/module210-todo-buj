@@ -21,6 +21,7 @@ jobs:
         uses: serversideup/github-action-docker-build@v6
         with:
           context: ./src/backend
+          dockerfile: ./src/backend/Dockerfile
           tags: ${{ env.REG_NAME }}/${{ env.IMAGE_NAME }}:${{ github.sha }}
           registry: ${{ env.REG_NAME}}
           registry-username: ${{ secrets.REGISTRY_USER }}
