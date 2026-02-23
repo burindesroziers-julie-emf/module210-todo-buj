@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'src/backend/**'
+      - '.github/workflows/ci-backend.yml'
     branches:
       - main  # Déclenchement lorsque le code est poussé sur main
 
