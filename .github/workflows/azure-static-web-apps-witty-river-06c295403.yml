@@ -43,6 +43,7 @@ jobs:
           api_location: "" # Api source code path - optional
           output_location: "." # Built app content directory - optional
           ###### End of Repository/Build Configurations ######
+
       - name: Lighthouse CI Action
         uses: treosh/lighthouse-ci-action@12.6.1
         with:
@@ -50,6 +51,9 @@ jobs:
           uploadArtifacts: true # Sauvegarde les rapports HTML dans les artefacts GitHub
           temporaryPublicStorage: true # Génère un lien public temporaire pour voir le rapport
           runs: 3 # Effectue 3 passages pour une moyenne plus fiable
+          budgetPath: ./budget.json # test performance budgets
+          uploadArtifacts: true # save results as an action artifacts
+          temporaryPublicStorage: true
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
