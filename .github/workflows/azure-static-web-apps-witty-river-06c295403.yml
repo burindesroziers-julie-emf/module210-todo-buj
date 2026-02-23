@@ -51,7 +51,7 @@ jobs:
           uploadArtifacts: true # Sauvegarde les rapports HTML dans les artefacts GitHub
           temporaryPublicStorage: true # Génère un lien public temporaire pour voir le rapport
           runs: 3 # Effectue 3 passages pour une moyenne plus fiable
-          configPath: './lighthouserc.json'
+          configPath: './.lighthouserc.json'
 
   
   close_pull_request_job:
