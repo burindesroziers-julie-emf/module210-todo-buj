@@ -2,6 +2,8 @@ name: Build and save my Docker image to a regitry
 
 on:
   push:
+    path:
+      - 'src/backend/**'
     branches:
       - main  # Déclenchement lorsque le code est poussé sur main
 
@@ -10,9 +12,8 @@ env:
   IMAGE_NAME: "be-jbdr" # Nom de votre image
 
 jobs:
-  build-and-deploy:
+  build-and-deploy:  
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
