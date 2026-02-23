@@ -16,10 +16,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-
-      - name: etape à réaliser
-        run: |
-          commande à réaliser
       
       - name: docker-build-action
         uses: serversideup/github-action-docker-build@v6
